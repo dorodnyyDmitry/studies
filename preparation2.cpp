@@ -31,15 +31,19 @@ int main()
 		wordQuantity++;
 	}
 
-	while (Potochek >> g)
-	{
-		if (g.size() < lastWordLength)
-			proof++;
-		lastWordLength = g.size();
-	}
+	if (wordQuantity == 1 || wordQuantity == 0)
+		cout << "ERROR";
+	else {
+		while (Potochek >> g)
+		{
+			if (g.size() < lastWordLength)
+				proof++;
+			lastWordLength = g.size();
+		}
 
-	if (proof == wordQuantity)
-		cout << "YES";
-	else cout << "NO";
+		if (proof == wordQuantity)
+			cout << "YES";
+		else cout << "NO";
+	}
 	return 0;
 }
